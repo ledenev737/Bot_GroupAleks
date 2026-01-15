@@ -141,3 +141,20 @@ Thumbs.db
 # Project specific
 leads.db
 config.py
+
+# Backups
+backups/
+*.db.gz
+*.backup
+*.before_restore.*
+
+# Docker
+data/
+.dockerignore
+
+# Scripts logs
+*.log
+health-check.log
+
+# Generated images
+generated/

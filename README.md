@@ -100,10 +100,27 @@ app/
     ├── common.py       # /help, /cancel, /language
     └── my_leads.py     # /my_leads - view and manage leads
 
+scripts/                            # 🔧 Automation scripts
+├── backup-bot.sh                   # Automated database backup
+├── restore-backup.sh               # Restore from backup
+├── check-bot-health.sh             # Health monitoring
+├── remote-backup.sh                # Remote backup sync
+├── telegram-alert.sh               # Telegram notifications
+├── telegram-lead-bot.service       # systemd service template
+└── README.md                       # Scripts documentation
+
 requirements.txt                    # Python dependencies
 .env                                # Environment variables (not in git)
+.env.example                        # Environment variables template
+Dockerfile                          # 🐳 Docker image
+docker-compose.yml                  # 🐳 Docker Compose config
+.dockerignore                       # Docker ignore patterns
 leads.db                            # SQLite database (auto-created)
 README.md                           # This file
+QUICKSTART.md                       # ⚡ Quick start guide
+DEPLOYMENT.md                       # 🚀 Production deployment guide
+PRODUCTION_CHECKLIST.md             # ✅ Production deployment checklist
+CHANGELOG.md                        # 📋 Version history and changes
 ROADMAP.md                          # Development roadmap
 AI_ENHANCEMENT.md                   # 🤖 AI enhancement documentation
 NEW_FEATURES.md                     # 📎 Files + 🔄 Repeat applications
@@ -203,3 +220,52 @@ Key design principles:
 - Type hints on all public functions
 - Explicit error handling with specific exceptions
 - Input validation at database layer
+
+## Production Deployment
+
+For production deployment on a VPS server:
+
+📖 **[QUICKSTART.md](QUICKSTART.md)** - Step-by-step quick start guide  
+📚 **[DEPLOYMENT.md](DEPLOYMENT.md)** - Complete production deployment guide  
+✅ **[PRODUCTION_CHECKLIST.md](PRODUCTION_CHECKLIST.md)** - Deployment checklist
+
+### Key Features
+
+- **VPS Setup** - Server configuration and security
+- **systemd Service** - Running bot as a system service
+- **Docker Deployment** - Containerized deployment option
+- **Automated Backups** - Database backup strategies with cron
+- **Monitoring** - Logging, alerts, and health checks
+- **Security** - Best practices for production environment
+- **Updates & Rollback** - Safe update procedures
+
+### Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/telegram-lead-bot.git
+cd telegram-lead-bot
+
+# Configure environment
+nano .env  # Set BOT_TOKEN and ADMIN_CHAT_ID
+
+# Option 1: Run with systemd
+sudo cp scripts/telegram-lead-bot.service /etc/systemd/system/
+sudo systemctl start telegram-lead-bot
+sudo systemctl enable telegram-lead-bot
+
+# Option 2: Run with Docker
+docker compose up -d
+```
+
+### Automation Scripts
+
+The `scripts/` directory includes ready-to-use automation tools:
+
+- `backup-bot.sh` - Automated database backup
+- `restore-backup.sh` - Restore from backup
+- `check-bot-health.sh` - Health monitoring
+- `remote-backup.sh` - Sync backups to remote server
+- `telegram-alert.sh` - Send alerts via Telegram
+
+See [scripts/README.md](scripts/README.md) for usage details.

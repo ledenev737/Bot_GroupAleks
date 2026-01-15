@@ -1,0 +1,27 @@
+[Unit]
+Description=Telegram Lead Bot
+After=network.target
+
+[Service]
+Type=simple
+User=botuser
+WorkingDirectory=/home/botuser/telegram-lead-bot
+Environment="PATH=/home/botuser/telegram-lead-bot/venv/bin"
+ExecStart=/home/botuser/telegram-lead-bot/venv/bin/python -m app.bot
+Restart=always
+RestartSec=10
+
+# Логирование
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=telegram-lead-bot
+
+# Безопасность
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/botuser/telegram-lead-bot
+
+[Install]
+WantedBy=multi-user.target
