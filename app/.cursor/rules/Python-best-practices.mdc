@@ -1,0 +1,56 @@
+---
+description: Python development best practices for project code
+globs:
+  - "**/*.py"
+alwaysApply: false
+---
+
+# Python Best Practices (Cursor)
+
+These rules apply ONLY to Python code.
+
+## 1. Code Style
+- Follow PEP 8
+- Use meaningful variable and function names
+- Avoid overly clever or dense code
+
+## 2. Structure
+- One module = one responsibility
+- Keep functions small and focused
+- Prefer composition over inheritance
+
+## 3. Typing
+- Use type hints for public functions
+- Prefer explicit types over Any
+- Keep typing practical, not excessive
+
+## 4. Error Handling
+- Never silence exceptions
+- Catch only specific exceptions
+- Fail fast when behavior is undefined
+
+## 5. State and Side Effects
+- Minimize shared mutable state
+- Prefer pure functions where possible
+- Make side effects explicit
+
+## 6. Performance
+- Optimize only after correctness
+- Avoid premature optimization
+- Prefer readability over micro-optimizations
+
+## 7. Testing Mindset
+- Write code that is testable by design
+- Avoid tight coupling to external systems
+- Make dependencies injectable
+
+## 8. Security and Safety
+- Never hardcode secrets
+- Validate all external input
+- Be explicit with file and network operations
+
+## 9. Final Rule
+If there is a conflict between:
+- Cleverness and clarity → choose clarity
+- Performance and correctness → choose correctness
+- Flexibility and simplicity → choose simplicity

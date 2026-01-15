@@ -1,0 +1,60 @@
+---
+description: Rules for generating and maintaining project documentation (non-roadmap)
+globs:
+  - "README.md"
+  - "docs/**/*.md"
+  - "documentation/**/*.md"
+  - "**/*docs*.md"
+alwaysApply: false
+---
+
+# Documentation Rules (Cursor)
+
+These rules apply when creating or editing project documentation.
+This file does NOT define roadmap structure or planning rules.
+
+## 1. Purpose and Scope
+- Each document MUST have a clearly stated purpose
+- One document = one responsibility
+- Do NOT include planning, prioritization, or timelines (belongs to roadmap)
+
+## 2. Audience
+- Explicitly define the intended reader (developer, user, maintainer)
+- Write at the appropriate technical depth
+
+## 3. Structure
+- Use clear headings (H1 → H3 max)
+- Logical top-down flow
+- No large unstructured text blocks
+
+## 4. Content Rules
+- Do NOT invent facts, APIs, or behavior
+- Document only what exists or is explicitly approved
+- Use examples only when they clarify usage
+
+## 5. Language & Style
+- Clear, concise, neutral tone
+- Prefer bullet points over prose
+- No marketing language
+
+## 6. Allowed Content
+- Setup and installation
+- Usage examples
+- Configuration
+- Architecture explanations
+- Troubleshooting
+
+## 7. Forbidden Content
+- Roadmap items
+- Future promises
+- Task prioritization
+- Deadlines or timelines
+
+## 8. Final Validation Checklist (REQUIRED)
+Cursor MUST confirm ALL before saving:
+- Purpose is clearly stated
+- Audience is defined
+- Single responsibility per document
+- Structure is readable and navigable
+- No invented facts or behavior
+- Content can be understood quickly

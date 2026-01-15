@@ -1,0 +1,75 @@
+---
+description: Rules for creating and maintaining checkbox-style project roadmaps
+globs:
+  - "ROADMAP.md"
+  - "roadmap.md"
+  - "docs/roadmap.md"
+  - "docs/roadmap/**"
+  - "**/*roadmap*.md"
+alwaysApply: false
+---
+
+# Roadmap Rules (Cursor)
+
+These rules apply ONLY to roadmap documents.
+The roadmap is a checkbox-based execution tracker, not documentation or a task manager.
+
+## Core Principle
+The roadmap MUST clearly show execution progress using explicit checkboxes.
+
+## Mandatory Checkbox Format
+Every roadmap item MUST be written as a checkbox:
+- [ ] Planned / not started
+- [x] Completed
+- [-] Blocked / frozen (optional)
+
+Items without checkboxes are NOT allowed.
+
+## Item Structure
+Each checkbox item MUST include:
+- A clear outcome (what exists after completion)
+- A concise scope (1–2 lines maximum)
+
+Example:
+- [x] User authentication implemented (login, logout, token refresh)
+- [ ] Payment flow integrated (Stripe, basic subscriptions only)
+
+## Grouping Rules
+- Group items by logical sections or phases
+- Section titles MUST be meaningful
+- Avoid deep nesting (maximum one level)
+
+## Level of Detail
+- Roadmap describes WHAT, not HOW
+- No code, APIs, schemas, or implementation steps
+- One checkbox equals one real deliverable
+
+## Time and Priority
+- Dates are optional
+- Prefer phases or milestones over deadlines
+- Do NOT assign speculative dates
+
+## Status Rules
+- Completed work MUST be marked [x]
+- Do NOT remove completed items
+- Blocked items MUST include a short reason
+
+## Relationship to Other Documents
+- Roadmap = execution progress
+- Documentation = explanations and usage
+- Tasks and tickets belong to external tools
+
+Do NOT mix these roles.
+
+## Update Discipline
+- Update checkboxes only on real progress
+- No aspirational or vague items
+- Keep the roadmap readable at a glance
+
+## Final Validation Checklist
+Before saving, confirm:
+- Every item has a checkbox
+- Each checkbox represents a real deliverable
+- Completed items are marked [x]
+- No documentation or implementation content exists
+- Roadmap is understandable in under 5 minutes
