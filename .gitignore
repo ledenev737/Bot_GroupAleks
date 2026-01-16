@@ -126,6 +126,7 @@ dmypy.json
 *.db
 *.sqlite
 *.sqlite3
+!leads.db
 
 # IDE
 .vscode/
@@ -139,8 +140,6 @@ dmypy.json
 Thumbs.db
 
 # Project specific
-leads.db
-config.py
 
 # Backups
 backups/
